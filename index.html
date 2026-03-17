@@ -252,6 +252,11 @@ tr:hover{
   font-size:16px;
   color:#333;
 }
+
+.menu-btn.oculto{  
+  opacity:0;
+  pointer-events:none;
+}  
   
 </style>
 </head>
@@ -449,6 +454,11 @@ let panel = document.getElementById("panel");
 
 function togglePanel(){
   panel.style.width="300px";
+  menuBtn.classList.add("oculto");
+  abiertoRecien = true;
+  setTimeout(() => {
+    abiertoRecien = false;
+   }, 100); 
 }
 
 function closePanel(){
