@@ -458,7 +458,17 @@ function closePanel(){
   menuBtn.style.display="flex";
 }
 
-</script>
 
+const panel =
+  document.getElementById("panel");
+
+  document.addEventListener("click",function(e) {
+  if(panel.classList.contains("activo")){
+    if(!panel.contains(e.target)){
+      panel.classList.remove("activo");
+    }
+  }
+});  
+</script>
 </body>
 </html>
