@@ -455,10 +455,20 @@ function closePanel(){
   panel.style.width="0";
 }
 
+let abiertoRecien = false;
+  function togglePanel(){
+    panel.style.width = "300px";
+    abiertoRecien = true;
 
-document.addEventListener("click",function(e)){
-  if(panel.style.width === "300px"){
-    if(!panel.contains(e.target) && !menuBtn.contains(e.target)){
+    setTimeout(() => {
+      abiertoRecien = false;
+    }, 100);
+  }
+
+  document.addEventListener("click",function(e) {
+    if(panel.style.width === "300px" && !abiertoRecien){
+      
+      if(!panel.contains(e.target) && !menuBtn.contains(e.target)){
       closePanel();
     }
   }
