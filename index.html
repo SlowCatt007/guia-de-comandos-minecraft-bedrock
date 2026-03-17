@@ -253,9 +253,14 @@ tr:hover{
   color:#333;
 }
 
+.side-panel.activo{  
+  width:300px;
+}  
+
 .menu-btn.oculto{  
   opacity:0;
   pointer-events:none;
+  transition:opacity 0.3s;
 }  
   
 </style>
@@ -451,25 +456,20 @@ Después de activar la opción de los “Trucos”, al entrar en tu mundo tienes
 <script>
 
 let panel = document.getElementById("panel");
-let menuBtn = document.getElementBryId("menuBtn");
-let abiertoRecien = false;  
+let menuBtn = document.getElementById("menuBtn");
 
 function togglePanel(){
-  panel.style.width="300px";
+  panel.classList.add("activo");
   menuBtn.classList.add("oculto");
-  abiertoRecien = true;
-  setTimeout(() => {
-    abiertoRecien = false;
-   }, 100); 
 }
 
 function closePanel(){
-  panel.style.width="0";
+  panel.classList.remove("activo");
   menuBtn.classList.remove("oculto");
 }
   
   document.addEventListener("click",function(e) {
-    if(panel.style.width === "300px" && !abiertoRecien){
+    if(panel.classList.contains("activo")){
       
       if(!panel.contains(e.target) && !menuBtn.contains(e.target)){
       closePanel();
