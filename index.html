@@ -43,7 +43,7 @@ h2{
 h3{
   font-family:"Minecraft";
   text-align:left;
-  font-size:#39px;
+  font-size:39px;
   margin-top:40px;
   margin-left:40px;
 }
@@ -459,15 +459,10 @@ function closePanel(){
 }
 
 
-const panel =
-  document.getElementById("panel");
-  const boton =
-  document.getElementById("boton-panel");  
-
-  document.addEventListener("click",function(e) {
-  if(panel.classList.contains("activo")){
-    if(!panel.contains(e.target) && !boton.contains(e.target)){
-      panel.classList.remove("activo");
+document.addEventListener("click",function(e)){
+  if(panel.style.width === "300px"){
+    if(!panel.contains(e.target) && !menuBtn.contains(e.target)){
+      closePanel();
     }
   }
 });  
