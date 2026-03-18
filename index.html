@@ -43,17 +43,19 @@ h3{
 }
   
 .bienvenida{
-  background:rgba(218, 204, 216, 0.99);
+  background:rgba(60, 40, 60, 0.8);
+  backdrop-filter:blur(6px);
   padding:30px;
   margin-top:20px;
   margin-left:40px;
   margin-right:40px;
-  border-radius:10px;
+  border-radius:12px;
   max-width:900px;
   line-height:1.6;
   font-size:18px;
   text-align:left;
-  box-shadow:0 2px 8px rgba(224, 224, 224,0.96);
+  box-shadow:0 0px 15px rgba(0,0,0,0.6);
+  border:1px solid rgba(255,255,255,0.1);
 }
 
 .menu-btn{
@@ -176,14 +178,17 @@ tr:hover{
 }
 
 .contacto{
-  background:rgba(255,255,255,0.9);
+  background:rgba(30,30,30,0.85);
+  background-filter:blur(6px);
   padding:30px;
   margin:40px auto;
-  border-radius:10px;
+  border-radius:12px;
   max-width:800px;
   font-size:16px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  box-shadow:0 0 15px rgba(0,0,0,0.7);
   line-height:1.6;
+  border:1px solid rgba(255,255,255,0.1);
+  color:#e0e0e0;
 }
 
 .contacto-info{
@@ -196,13 +201,13 @@ tr:hover{
 
 .contacto-info .autor{
   font-size:14px;
-  color:#000;
+  color:#e0e0e0;
   margin:0;
 }
 
 .contacto-info .fecha-publicacion{
   font-size:14px;
-  color:#000;
+  color:#e0e0e0;
   margin:0;
 }
 
@@ -213,16 +218,20 @@ tr:hover{
 .contacto .redes a{
   display:inline-block;
   margin:10px 15px;
-  padding:10px 20px;
-  background:#310b2e;
+  padding:12px 25px;
+  background:linear-gradient(145deg,#4b2a4b,#2a102a);
   color:white;
   text-decoration:none;
-  border-radius:5px;
-  transition: background 0.2s;
+  border-radius:8px;
+  transition:0.2s;
+  border:2px solid #000;
+  box-shadow:0 4px 0 #000;
 }
 
 .contacto .redes a:hover{
-  background:#520f46;
+  transform:translateY(-2px);
+  box-shadow:0 6px 0 #000;
+  background:linear-gradient(145deg,#6a3a6a,#3a1a3a);
 }
 
 .example-imagen{
