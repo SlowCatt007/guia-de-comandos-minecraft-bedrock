@@ -141,40 +141,44 @@ h3{
 
 table{
   width:100%;
-  border-collapse:collapse;
   margin-top:20px;
   font-size:18px;
-  border-radius:8px;
+  border-radius:12px;
   overflow:hidden;
+  border-collapse:separate;
+  border-spacing:0;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
 th{
-  background:#5a2a5a;
+  background:linear-gradient(135deg,#5a2a5a,#7b3c7b);
   color:white;
-  padding:10px;
+  padding:12px;
+  text-align:center;
+  font-size:18px;
 }
 
 td{
-  padding:10px;
-  border-bottom:1px solid #ddd;
+  padding:12px;
+  text-align:center;
 }
 
-td:nth-child(1),
-td:nth-child(2){
-  text-align:center;
-  vertical-align:middle;
+tr{
+  background:rgba(255,255,255,0.9);
+  transition:0.2s;
 }
 
 tr:nth-child(even){
-  background:#f7f7f7;
+  background:rgba(240,240,240,0.9);
 }
 
 tr:hover{
-  background:#eee;
+  background:#d9b3d9;
+  transform:scale(1.01);
 }
 
 .contacto{
-  background:rgba(255,255,255,0,9);
+  background:rgba(255,255,255,0.9);
   padding:30px;
   margin:40px auto;
   border-radius:10px;
