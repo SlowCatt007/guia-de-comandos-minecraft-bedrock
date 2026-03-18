@@ -15,12 +15,6 @@
 body{
   font-family:"Minecraft";
   margin:0;
-
-  background-image:url("images/fondo.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  background-attachment:scroll;
 }
 
 h1{
@@ -270,12 +264,28 @@ tr:hover{
   pointer-events:none;
   transition:opacity 0.3s;
 }  
+
+.fondo{  
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100";
+
+  background-image:url("images/fondo.jpg);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  z-index:-1;
+  }  
   
 </style>
 </head>
 
 <body>
-
+<div class="fondo"></div>
+  
 <div id="menuBtn" class="menu-btn" onclick="togglePanel()">
   <div class="line"></div>
   <div class="line"></div>
